@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, Users, Clock, Zap, Globe } from "lucide-react"
+import { FaUsers, FaClock, FaBolt, FaGlobe } from "react-icons/fa";
 
 const images = [
   "/assets/photo_2025-11-09_11-29-26.jpg",
@@ -125,41 +126,51 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 px-4 bg-background">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-balance">Why we are the best ESL school?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Users,
-                title: "Why we are the best ESL school?",
-                description: "Our talented, dedicated teachers prioritise helping students communicate in English in a natural manner.",
-              },
-              {
-                icon: Clock,
-                title: "Flexible Scheduling",
-                description: "Classes fit your schedule with flexible timing options",
-              },
-              {
-                icon: Zap,
-                title: "Interactive Learning",
-                description: "Engaging lessons with conversations, activities, and real-world scenarios",
-              },
-              {
-                icon: Globe,
-                title: "Global Community",
-                description: "Connect with qualified English teachers from around the world, and learn how real English conversations are held.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="p-6 rounded-lg border border-border bg-card hover:shadow-lg transition">
-                <item.icon className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-foreground/70">{item.description}</p>
-              </div>
-            ))}
-          </div>
+   <section className="py-20 px-4 bg-background">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl font-bold text-center mb-16 text-balance">
+      Why we are the best ESL school?
+    </h2>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        {
+          icon: FaUsers,
+          title: "Expert Teachers",
+          description:
+            "Highly skilled and friendly instructors who help students communicate naturally and confidently.",
+        },
+        {
+          icon: FaClock,
+          title: "Flexible Scheduling",
+          description:
+            "Learn at your own pace with class times that fit your lifestyle.",
+        },
+        {
+          icon: FaBolt,
+          title: "Interactive Learning",
+          description:
+            "Engaging lessons filled with conversations, activities, and real-world English usage.",
+        },
+        {
+          icon: FaGlobe,
+          title: "Global Community",
+          description:
+            "Connect with teachers and students from around the world and experience authentic communication.",
+        },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="p-6 rounded-lg border border-border bg-card hover:shadow-lg transition"
+        >
+          <item.icon className="w-12 h-12 text-primary mb-4" />
+          <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+          <p className="text-foreground/70">{item.description}</p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Our Metrics */}
       <section className="py-20 px-4 bg-primary text-primary-foreground">

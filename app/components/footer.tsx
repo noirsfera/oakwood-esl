@@ -38,7 +38,7 @@ export default function Footer ()  {
             <div>
               <h3 className="font-bold text-lg mb-4">Contact</h3>
               <p className="text-background/80">Telegram: @itsslucki</p>
-              <p className="text-background/80">Email: hello@schoolname.com</p>
+              <p className="text-background/80">Email: hello@oakwood.com</p>
             </div>
             <div>
               <h3 className="font-bold text-lg mb-4">Follow Us</h3>
