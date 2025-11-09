@@ -1,5 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
+import { FaVaadin, FaVk } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+import { TbBrandInstagramFilled } from "react-icons/tb";
 
 export default function Footer ()  {
   return (
@@ -9,7 +12,7 @@ export default function Footer ()  {
             <div>
               <h3 className="font-bold text-lg mb-4">About Us</h3>
               <p className="text-background/80">
-                Dedicated to helping students master English communication with confidence.
+                 Oakwood ESL is a dynamic and down-to-earth English school that nurtures bright and imaginative students. We focus on real communication and prepare our students for real life situations.
               </p>
             </div>
             <div>
@@ -41,13 +44,13 @@ export default function Footer ()  {
               <h3 className="font-bold text-lg mb-4">Follow Us</h3>
               <div className="flex gap-4 text-background/80">
                 <a href="#" className="hover:text-background transition">
-                  Instagram
+                  <FaVk size={24} color='white' />
                 </a>
                 <a href="#" className="hover:text-background transition">
-                  Facebook
+                  <FaTelegramPlane size={24} color='white' />
                 </a>
                 <a href="#" className="hover:text-background transition">
-                  Twitter
+                  <TbBrandInstagramFilled size={24} color='white'/>
                 </a>
               </div>
             </div>

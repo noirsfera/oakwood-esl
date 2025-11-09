@@ -101,10 +101,10 @@ export default function Home() {
               <span className="text-sm font-medium">Speak Fluently ✨</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance">
-              Grow your skills - at your <span className="text-blue-300">Pace</span>
+              English learning with a modern <span className="text-blue-300">edge</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 text-pretty">
-              Unlock global opportunities with expert English lessons tailored to you
+              Learn how to communicate in English with real native speakers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -127,13 +127,13 @@ export default function Home() {
       {/* Why Choose Us */}
       <section className="py-20 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-balance">Why Choose Speak Fluently?</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-balance">Why we are the best ESL school?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Users,
-                title: "Expert Teachers",
-                description: "Learn from experienced native and non-native English speakers",
+                title: "Why we are the best ESL school?",
+                description: "Our talented, dedicated teachers prioritise helping students communicate in English in a natural manner.",
               },
               {
                 icon: Clock,
@@ -148,7 +148,7 @@ export default function Home() {
               {
                 icon: Globe,
                 title: "Global Community",
-                description: "Connect with students from around the world",
+                description: "Connect with qualified English teachers from around the world, and learn how real English conversations are held.",
               },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-lg border border-border bg-card hover:shadow-lg transition">
@@ -167,15 +167,15 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-16">Our Impact</h2>
           <div className="grid md:grid-cols-3 gap-12 text-center">
             <div>
-              <div className="text-5xl font-bold mb-2">500+</div>
-              <p className="text-lg opacity-90">Active Students</p>
+              <div className="text-5xl font-bold mb-2">25+</div>
+              <p className="text-lg opacity-90">Active Students and growing</p>
             </div>
             <div>
-              <div className="text-5xl font-bold mb-2">50+</div>
-              <p className="text-lg opacity-90">Expert Teachers</p>
+              <div className="text-5xl font-bold mb-2">10+</div>
+              <p className="text-lg opacity-90">Expert Native English teachers</p>
             </div>
             <div>
-              <div className="text-5xl font-bold mb-2">15+</div>
+              <div className="text-5xl font-bold mb-2">3+</div>
               <p className="text-lg opacity-90">Countries Represented</p>
             </div>
           </div>
