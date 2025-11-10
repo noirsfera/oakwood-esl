@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import Link from "next/link"
+import Image from "next/image"
 import Footer from "./components/footer"
 import "./globals.css"
 
@@ -43,10 +44,16 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <Link href="/" className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold">
-                  O
+                <div className="rounded-lg flex items-center justify-center text-primary-foreground font-bold">
+                  <Image
+                  alt="Oakwood "
+                  src="/oakwood-banner.png"
+                  width={90}
+                  height={90}
+                  priority
+                  />
                 </div>
-                <span className="font-bold text-xl text-primary hidden sm:inline">Oakwood ESL</span>
+                <span className="font-bold text-xl text-primary hidden sm:inline">ESL</span>
               </Link>
               <div className="hidden md:flex items-center gap-8">
                 <Link href="/" className="text-foreground/70 hover:text-foreground transition">
@@ -63,7 +70,7 @@ export default function RootLayout({
                 </Link>
               </div>
               <Link
-                href="/contact"
+                href="/bookings"
                 className="bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:opacity-90 transition"
               >
                 Enroll Now

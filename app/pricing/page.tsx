@@ -57,7 +57,7 @@ const comparisonFeatures = [
   { feature: "One-on-One Sessions", individual: true, group: false, club: false },
   { feature: "Group Interaction", individual: false, group: true, club: true },
   { feature: "Flexible Scheduling", individual: true, group: true, club: true },
-  { feature: "Progress Reports", individual: true, group: false, club: false },
+  { feature: "Progress Reports", individual: true, group: true, club: false },
   { feature: "Speaking Practice", individual: true, group: true, club: true },
 ]
 
@@ -262,7 +262,7 @@ export default function Pricing() {
               },
               {
                 q: "What payment methods do you accept?",
-                a: "We accept bank transfers, UPI, and various digital payment methods. Contact our team for specific payment details.",
+                a: "We accept bank transfers, cash, and various digital payments methods. Contact our team for specific payment details.",
               },
             ].map((item, i) => (
               <div key={i} className="border border-border/30 rounded-lg p-6 hover:bg-white/50 transition">

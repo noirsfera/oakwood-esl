@@ -111,22 +111,6 @@ export default function Courses() {
                   <h2 className="text-2xl font-bold mb-2 text-foreground">{course.title}</h2>
                   <p className="text-foreground/70 mb-8 text-sm leading-relaxed">{course.description}</p>
 
-                  <div className="mb-8 pb-8 border-b border-border/30 space-y-4">
-                    <div>
-                      <div className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-2">
-                        First Lesson (50% off)
-                      </div>
-                      <div className="text-3xl font-bold text-primary">{course.trial}</div>
-                      <div className="text-xs text-foreground/50 mt-1">Get started with a trial</div>
-                    </div>
-                    <div>
-                      <div className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-2">
-                        Regular Price per Lesson
-                      </div>
-                      <div className="text-xl font-semibold text-foreground">{course.price}</div>
-                    </div>
-                  </div>
-
                   <div className="mb-8 space-y-3 flex-grow">
                     <div className="text-xs font-bold text-foreground uppercase tracking-wider">What's Included</div>
                     {course.features.map((feature, i) => (
@@ -176,7 +160,7 @@ export default function Courses() {
               },
               {
                 step: 2,
-                title: "Book Trial Lesson",
+                title: "Trial Lesson",
                 description: "Get 50% off your first session and meet our instructors",
                 icon: <CiBookmarkCheck color="red" />,
               },

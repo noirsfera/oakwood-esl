@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, Users, Clock, Zap, Globe } from "lucide-react"
 import { FaUsers, FaClock, FaBolt, FaGlobe } from "react-icons/fa";
+import { ExperiencesSection } from "./components/experience-section"
 
 const images = [
   "/assets/photo_2025-11-09_11-29-26.jpg",
@@ -102,7 +103,7 @@ export default function Home() {
               <span className="text-sm font-medium">Speak Fluently ✨</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance">
-              English learning with a modern <span className="text-blue-300">edge</span>
+              English learning with a very modern <span className="text-blue-300">edge</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 text-pretty">
               Learn how to communicate in English with real native speakers.
@@ -171,6 +172,8 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+<ExperiencesSection />
 
       {/* Our Metrics */}
       <section className="py-20 px-4 bg-primary text-primary-foreground">
