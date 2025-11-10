@@ -57,7 +57,7 @@ const comparisonFeatures = [
   { feature: "One-on-One Sessions", individual: true, group: false, club: false },
   { feature: "Group Interaction", individual: false, group: true, club: true },
   { feature: "Flexible Scheduling", individual: true, group: true, club: true },
-  { feature: "Progress Reports", individual: true, group: true, club: false },
+  { feature: "Progress Reports", individual: true, group: true, club: true },
   { feature: "Speaking Practice", individual: true, group: true, club: true },
 ]
 
