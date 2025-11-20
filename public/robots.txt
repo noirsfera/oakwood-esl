@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://oakwoodesl.com
+
+# Sitemaps
+Sitemap: https://oakwoodesl.com/sitemap.xml
