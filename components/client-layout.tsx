@@ -3,16 +3,20 @@
 import type React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
+import { Menu, X } from 'lucide-react'
 import { useState } from "react"
+import { useLanguage } from "@/contexts/language-context"
+import { translations } from "@/lib/translation"
+import LanguageSwitcher from "./language-switcher"
 
 export default function ClientLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { language } = useLanguage()
+  const t = translations[language].nav
 
   return (
     <>
@@ -29,17 +33,18 @@ export default function ClientLayout({
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <Link href="/" className="text-foreground/70 hover:text-foreground transition">
-                Home
+                {t.home}
               </Link>
               <Link href="/courses" className="text-foreground/70 hover:text-foreground transition">
-                Courses
+                {t.courses}
               </Link>
               <Link href="/pricing" className="text-foreground/70 hover:text-foreground transition">
-                Pricing
+                {t.pricing}
               </Link>
               <Link href="/contact" className="text-foreground/70 hover:text-foreground transition">
-                Contact
+                {t.contact}
               </Link>
+              <LanguageSwitcher />
             </div>
 
             {/* Desktop Enroll Button */}
@@ -47,10 +52,9 @@ export default function ClientLayout({
               href="/bookings"
               className="hidden md:block bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:opacity-90 transition"
             >
-              Enroll Now
+              {t.enrollNow}
             </Link>
 
-            {/* <CHANGE> Added hamburger menu button for mobile */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 text-foreground hover:text-primary transition"
@@ -60,7 +64,6 @@ export default function ClientLayout({
             </button>
           </div>
 
-          {/* <CHANGE> Added mobile menu */}
           {isMobileMenuOpen && (
             <div className="md:hidden pb-4 animate-in slide-in-from-top-5 duration-200">
               <div className="flex flex-col space-y-3">
@@ -69,35 +72,38 @@ export default function ClientLayout({
                   className="text-foreground/70 hover:text-foreground transition px-2 py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Home
+                  {t.home}
                 </Link>
                 <Link
                   href="/courses"
                   className="text-foreground/70 hover:text-foreground transition px-2 py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Courses
+                  {t.courses}
                 </Link>
                 <Link
                   href="/pricing"
                   className="text-foreground/70 hover:text-foreground transition px-2 py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Pricing
+                  {t.pricing}
                 </Link>
                 <Link
                   href="/contact"
                   className="text-foreground/70 hover:text-foreground transition px-2 py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Contact
+                  {t.contact}
                 </Link>
+                <div className="px-2 py-2">
+                  <LanguageSwitcher />
+                </div>
                 <Link
                   href="/bookings"
                   className="bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:opacity-90 transition text-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Enroll Now
+                  {t.enrollNow}
                 </Link>
               </div>
             </div>
