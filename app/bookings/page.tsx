@@ -243,12 +243,9 @@ export default function Booking() {
                             required
                           >
                             <option value="">{t.form.selectCourse}</option>
-                            <option value="general">{t.form.general}</option>
-                            <option value="business">{t.form.business}</option>
-                            <option value="conversation">{t.form.conversation}</option>
-                            <option value="exam">{t.form.exam}</option>
-                            <option value="kids">{t.form.kids}</option>
-                            <option value="intensive">{t.form.intensive}</option>
+                            <option value="general">{t.form.individual}</option>
+                            <option value="general">{t.form.club}</option>
+                            <option value="general">{t.form.homeVisit}</option>
                           </select>
                         </div>
 
@@ -287,11 +284,11 @@ export default function Booking() {
                           required
                         >
                           <option value="">{t.form.selectPackage}</option>
-                          <option value="trial">{t.form.trial}</option>
-                          <option value="starter">{t.form.starter}</option>
-                          <option value="standard">{t.form.standard}</option>
-                          <option value="intensive">{t.form.intensivePackage}</option>
-                          <option value="unlimited">{t.form.unlimited}</option>
+                          <option value="trial">{t.form.individual}</option>
+                          <option value="starter">{t.form.group}</option>
+                          <option value="standard">{t.form.club}</option>
+                          <option value="intensive">{t.form.homeVisit}</option>
+                          
                         </select>
                       </div>
                     </div>
