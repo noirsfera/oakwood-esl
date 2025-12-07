@@ -231,6 +231,9 @@ export default function Courses() {
                       alt={`${book.title} - ${book.subtitle}`}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" // responsive
+                      placeholder="blur"
+                      blurDataURL="/assets/placeholder-blur.jpg" // small base64 or low-res image
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
