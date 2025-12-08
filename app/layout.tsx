@@ -4,18 +4,24 @@ import { Analytics } from "@vercel/analytics/next"
 import Footer from "@/components/footer"
 import "./globals.css"
 import ClientLayout from "@/components/client-layout"
-import { Metadata } from "next"
+import type { Metadata } from "next"
 import { LanguageProvider } from "@/contexts/language-context"
 
-const geist = Geist({ subsets: ["latin"] })
-const geistMono = Geist_Mono({ subsets: ["latin"] })
-
-
+const geist = Geist({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+})
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+})
 
 export const metadata: Metadata = {
   title: {
     default: "Oakwood English Language School | Professional Academic ESL Training",
-    template: "%s | Oakwood Language School"
+    template: "%s | Oakwood Language School",
   },
   description:
     "Oakwood ESL School provides accredited English-language programs, modern ESL training, IELTS & TOEFL preparation, and immersive learning for international students.",
@@ -29,15 +35,15 @@ export const metadata: Metadata = {
     "English Courses",
     "Language Classes",
     "Accredited Language School",
-    "Oakwood English School"
+    "Oakwood English School",
   ],
   metadataBase: new URL("https://oakwoodesl.com"),
   alternates: {
     canonical: "https://oakwoodesl.com",
     languages: {
       en: "https://oakwoodesl.com/en",
-      ru: "https://oakwoodesl.com/ru"
-    }
+      ru: "https://oakwoodesl.com/ru",
+    },
   },
   openGraph: {
     type: "website",
@@ -51,29 +57,25 @@ export const metadata: Metadata = {
         url: "https://oakwoodesl.com/oakwood-logo.png",
         width: 1200,
         height: 630,
-        alt: "Oakwood ESL School"
-      }
-    ]
+        alt: "Oakwood ESL School",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Oakwood English Language School",
-    description:
-      "Accredited English courses, ESL training, and IELTS/TOEFL preparation.",
-    images: ["https://oakwoodesl.com/oakwood-logo.png"]
+    description: "Accredited English courses, ESL training, and IELTS/TOEFL preparation.",
+    images: ["https://oakwoodesl.com/oakwood-logo.png"],
   },
   icons: {
-    icon: "/favicon.ico"
-  }
+    icon: "/favicon.ico",
+  },
 }
 
-export default function RootLayout({
-  children
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={`${geist.className} antialiased`}>
-
         <LanguageProvider>
           <ClientLayout>{children}</ClientLayout>
 
@@ -102,21 +104,21 @@ export default function RootLayout({
                   "@type": "PostalAddress",
                   streetAddress: "YOUR ADDRESS HERE",
                   addressLocality: "YOUR CITY",
-                  addressCountry: "YOUR COUNTRY"
+                  addressCountry: "YOUR COUNTRY",
                 },
                 contactPoint: {
                   "@type": "ContactPoint",
                   telephone: "+YOUR PHONE",
                   contactType: "Customer Service",
                   areaServed: "Worldwide",
-                  availableLanguage: ["English", "Russian"]
+                  availableLanguage: ["English", "Russian"],
                 },
                 sameAs: [
                   "https://facebook.com/oakwood",
                   "https://instagram.com/oakwood",
-                  "https://tiktok.com/@oakwood"
-                ]
-              })
+                  "https://tiktok.com/@oakwood",
+                ],
+              }),
             }}
           />
 
@@ -131,9 +133,9 @@ export default function RootLayout({
                 potentialAction: {
                   "@type": "SearchAction",
                   target: "https://oakwoodesl.com/?s={search_term_string}",
-                  "query-input": "required name=search_term_string"
-                }
-              })
+                  "query-input": "required name=search_term_string",
+                },
+              }),
             }}
           />
         </LanguageProvider>

@@ -1,34 +1,35 @@
-"use client";
+"use client"
 
-import dynamic from "next/dynamic";
-import Link from "next/link";
-import { FaUsers, FaClock, FaBolt, FaGlobe } from "react-icons/fa";
-import { ExperiencesSection } from "@/components/experience-section";
-import { useLanguage } from "@/contexts/language-context";
-import { translations } from "@/lib/translation";
-
+import dynamic from "next/dynamic"
+import Link from "next/link"
+import { FaUsers, FaClock, FaBolt, FaGlobe } from "react-icons/fa"
+import { useLanguage } from "@/contexts/language-context"
+import { translations } from "@/lib/translation"
 
 const HeroSlider = dynamic(() => import("@/components/Slider"), {
   ssr: false,
-  loading: () => (
-    <div className="w-full h-screen bg-black animate-pulse" />
-  ),
-});
+  loading: () => <div className="w-full h-screen bg-black" />,
+})
+
+const ExperiencesSection = dynamic(
+  () => import("@/components/experience-section").then((mod) => ({ default: mod.ExperiencesSection })),
+  {
+    ssr: false,
+    loading: () => <div className="py-20 bg-slate-950 min-h-[600px]" />,
+  },
+)
 
 export default function HomePage() {
-  const { language } = useLanguage();
-  const t = translations[language].home;
+  const { language } = useLanguage()
+  const t = translations[language].home
 
   return (
     <main className="min-h-screen">
-
       <HeroSlider />
 
       <section className="py-20 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">
-            {t.whyChoose.title}
-          </h2>
+          <h2 className="text-4xl font-bold text-center mb-16">{t.whyChoose.title}</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -53,10 +54,7 @@ export default function HomePage() {
                 description: t.whyChoose.feature4.description,
               },
             ].map((item, i) => (
-              <div
-                key={i}
-                className="p-6 rounded-lg border border-border bg-card hover:shadow-lg transition"
-              >
+              <div key={i} className="p-6 rounded-lg border border-border bg-card hover:shadow-lg transition">
                 <item.icon className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
                 <p className="text-foreground/70">{item.description}</p>
@@ -72,9 +70,7 @@ export default function HomePage() {
       {/* METRICS */}
       <section className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">
-            {t.impact.title}
-          </h2>
+          <h2 className="text-4xl font-bold text-center mb-16">{t.impact.title}</h2>
           <div className="grid md:grid-cols-3 gap-12 text-center">
             <div>
               <div className="text-5xl font-bold mb-2">25+</div>
@@ -115,5 +111,5 @@ export default function HomePage() {
         </div>
       </section>
     </main>
-  );
+  )
 }

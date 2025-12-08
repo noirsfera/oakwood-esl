@@ -13,22 +13,17 @@ export const ExperiencesSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Intro */}
         <div className="mb-16 text-center">
-          <p className="text-emerald-400 text-sm font-semibold tracking-wider uppercase mb-3">
-            {t.badge}
-          </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 text-balance leading-tight">
-            {t.title}
-          </h2>
+          <p className="text-emerald-400 text-sm font-semibold tracking-wider uppercase mb-3">{t.badge}</p>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 text-balance leading-tight">{t.title}</h2>
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto text-pretty leading-relaxed">
             {t.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
-          
           <BentoTilt className="md:col-span-8 h-[500px] md:h-[600px]">
             <BentoCard
-              src={["/assets/photo_2025-11-09_11-31-47.jpg", "/assets/photo_2025-11-09_11-29-30.jpg"]}
+              src={["/assets/photo_2025-11-09_11-31-47.webp", "/assets/photo_2025-11-09_11-29-30.webp"]}
               isImage={true}
               title={t.card1.title}
               description={t.card1.description}
@@ -47,7 +42,7 @@ export const ExperiencesSection = () => {
 
           <BentoTilt className="md:col-span-4 h-[380px]">
             <BentoCard
-              src={["/assets/photo_2025-11-09_11-31-50.jpg", "/assets/photo_2025-11-09_11-29-52.jpg"]}
+              src={["/assets/photo_2025-11-09_11-31-50.webp", "/assets/photo_2025-11-09_11-29-52.webp"]}
               isImage={true}
               title={t.card3.title}
               description={t.card3.description}
@@ -56,7 +51,7 @@ export const ExperiencesSection = () => {
 
           <BentoTilt className="md:col-span-4 h-[380px]">
             <BentoCard
-              src={["/assets/photo_2025-11-09_11-29-37.jpg", "/assets/photo_2025-11-09_11-30-06.jpg"]}
+              src={["/assets/photo_2025-11-09_11-29-37.webp", "/assets/photo_2025-11-09_11-30-06.webp"]}
               isImage={true}
               title={t.card4.title}
               description={t.card4.description}
