@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Hero from "@/components/hero"
-import ExperiencesSection from "@/components/experience-section"
+import { ExperiencesSection } from "@/components/experience-section"
 import { translations } from "@/lib/translation"
 
 type Feature = {
@@ -48,7 +48,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ExperiencesSection t={t.vision} />
+      <ExperiencesSection/>
 
       {/* METRICS */}
       <section className="py-20 px-4 bg-primary text-primary-foreground">
